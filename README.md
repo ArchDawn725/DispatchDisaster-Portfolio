@@ -1,22 +1,26 @@
 # DispatchDisaster-Portfolio
 
-Dispatch Disaster (2020)
+
+**Dispatch Disaster (2020)**
 
 An early large-scale emergency-management simulation and my first major Unity project.
 
-⭐ Project Overview
+
+**⭐ Project Overview**
 
 Dispatch Disaster is a real-time emergency-management strategy game inspired by my experience working with 911 dispatch systems. Developed between late 2019 and mid-2020, the game features city-scale map generation, multi-agency call handling, vehicle dispatch logic, dynamic regional influence, and a competitive/cooperative 3-player multiplayer mode built on Photon.
 
 This was my first near-completed Unity game, built entirely solo—including all 3D art created inside the Unity engine—before I had exposure to Blender or proper mesh workflows. The project was cancelled due to performance bottlenecks caused by hand-built modular models, but I may revisit the concept in the future.
 
-🎮 Gameplay Summary
+
+**🎮 Gameplay Summary**
 
 Players take the role of a 911 dispatcher operating Police, Fire, Medical, or all three agencies in single-player. Emergencies spawn across a dynamically expanding playfield, and players must dispatch vehicles, manage transport routes, balance response priorities, and prevent regions from hitting zero influence.
 
 In multiplayer, three players compete for regional control while sharing the risk that if any region hits zero influence, everyone loses, creating a unique simultaneous competitive-cooperative tension.
 
-🧩 Key Features
+
+**🧩 Key Features**
 
 Procedural urban map generation
 
@@ -34,7 +38,8 @@ Vehicle routing, priority handling, and timed emergency resolution
 
 Unique agency-specific mechanics and progression paths
 
-🏗️ Architecture Overview
+
+**🏗️ Architecture Overview**
 
 Dispatch Disaster was built before I had learned scalable code architecture patterns. As a result, the project features:
 
@@ -62,15 +67,17 @@ The starting point from which I grew into strong architecture and system design 
 
 The ability to scope, design, and nearly complete a large solo project
 
-🗂️ Key Scripts to Review
+
+
+**🗂️ Key Scripts to Review**
 
 Below are recommended categories. Because the original architecture is loose, choose any script matching these descriptions. I can help locate them in your repo once it is uploaded.
 
-Core
+*Core*
 
 Game Initialization Script — bootstraps the city, loads starting data, sets player agency
 
-Systems
+*Systems*
 
 Emergency Spawn System — generates emergency events with varying priority/timeout logic
 
@@ -82,7 +89,7 @@ Agency Behavior Scripts — per-agency logic for Police, Fire, Medical
 
 Gameplay Loop Controller — processes updates, call resolutions, and state changes
 
-Managers
+*Managers*
 
 Map Generation Manager — builds the city layout and zones
 
@@ -90,7 +97,7 @@ Vehicle Manager — handles pooling/spawning of engines, cruisers, and ambulance
 
 Multiplayer Manager (Photon) — synchronizes calls, regions, and player actions
 
-UI
+*UI*
 
 Start Screen Controller — unique animated menu state
 
@@ -104,7 +111,9 @@ Debug/Test Spawner
 
 Timer or Async Handler
 
-📁 Project Structure
+
+
+**📁 Project Structure**
 /AI
 /Core
 /Data
@@ -115,7 +124,8 @@ Timer or Async Handler
 /Utilities
 /Tools
 
-🧪 Development Notes
+
+**🧪 Development Notes**
 Scalability & Performance
 
 3D models constructed manually in the Unity editor
@@ -142,7 +152,9 @@ Shared map, separate agencies, synchronized emergencies
 
 Hybrid competitive-cooperative ruleset
 
-🚒 Why This Project Matters
+
+
+**🚒 Why This Project Matters**
 
 Despite being my earliest large Unity project, Dispatch Disaster represents:
 
@@ -158,7 +170,9 @@ A major stepping stone that shaped how I approached architecture in all future p
 
 This project shows the starting point of my engineering growth—from god scripts and duplicated logic to the modular, scalable architectures I use today.
 
-📚 Lessons Learned
+
+
+**📚 Lessons Learned**
 
 Importance of proper code architecture and avoiding god-classes
 
@@ -176,7 +190,9 @@ Increased awareness of complexity scaling on large maps
 
 How to scope and structure large solo projects
 
-🛠️ Tech Stack
+
+
+**🛠️ Tech Stack**
 
 Unity 2019.x
 
@@ -188,7 +204,9 @@ Custom procedural city generation
 
 Unity UI (UGUI)
 
-🖼️ Full Image Gallery
+
+
+**🖼️ Full Image Gallery**
 
 ![109777368_1173432083018156_2028845277040491646_n](https://github.com/user-attachments/assets/23521953-15b4-4542-8109-3f5dab67d809)
 ![116747182_1185006081860756_4910486803769201389_n](https://github.com/user-attachments/assets/906c9fc4-3cef-4f48-8753-9116043c4a45)
