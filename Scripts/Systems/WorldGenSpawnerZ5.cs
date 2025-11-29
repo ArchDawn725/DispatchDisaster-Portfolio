@@ -1,0 +1,49 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WorldGenSpawnerZ5 : MonoBehaviour
+{
+    public GameObject Zone5BridgeSpawner;
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Zone1" || other.gameObject.tag == "Zone2" || other.gameObject.tag == "Zone3" || other.gameObject.tag == "Zone4" || other.gameObject.tag == "Zone5"
+            || other.gameObject.tag == "RiverTurn")
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.tag == "River")
+        {
+            this.gameObject.tag = "Player";
+            Invoke("SpawnBridge", 0.2f);
+        }
+    }
+
+    public GameObject worldGen;
+
+    public WorldGeneration worldGenS;
+
+    void Start()
+    {
+
+        worldGen = GameObject.Find("WorldGenerator");
+
+        worldGenS = worldGen.GetComponent("WorldGeneration") as WorldGeneration;
+    }
+
+    public void Update()
+    {
+        if (worldGenS.generationFinished == true)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void SpawnBridge()
+    {
+        Instantiate(Zone5BridgeSpawner, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
+    }
+}
