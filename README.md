@@ -68,43 +68,31 @@ In multiplayer, three players compete for regional control while sharing the ris
 
 # **🗂️ Key Scripts to Review**
 
-### *Core*
+## *Core*
 
-Game Initialization Script — bootstraps the city, loads starting data, sets player agency
+*Controller.cs*
 
-### *Systems*
+## *Systems*
 
-Emergency Spawn System — generates emergency events with varying priority/timeout logic
+*WorldGeneration.cs*
 
-Vehicle Dispatch System — routes vehicles, tracks arrival, handles scene logic
+*WorldGenSpawner.cs*
 
-Influence System — manages regional influence values and loss states
+*Vision.cs*
 
-Agency Behavior Scripts — per-agency logic for Police, Fire, Medical
+*Hospital.cs*
 
-Gameplay Loop Controller — processes updates, call resolutions, and state changes
+*EMSEmergancy.cs*
 
-### *Managers*
+*Ambulance.cs*
 
-Map Generation Manager — builds the city layout and zones
+*CounterManager.cs*
 
-Vehicle Manager — handles pooling/spawning of engines, cruisers, and ambulances
+## *UI*
 
-Multiplayer Manager (Photon) — synchronizes calls, regions, and player actions
+*ItemButton.cs*
 
-### *UI*
-
-Start Screen Controller — unique animated menu state
-
-HUD Call Display System — shows active calls, timers, priorities
-
-Achievements UI System
-
-Utilities / Tools
-
-Debug/Test Spawner
-
-Timer or Async Handler
+*ChatBox.cs*
 
 
 # **🧪 Development Notes**
